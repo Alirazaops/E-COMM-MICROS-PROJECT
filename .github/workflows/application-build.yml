@@ -94,7 +94,7 @@ jobs:
           docker build -t $IMAGE_URI $FOLDER
           docker push $IMAGE_URI
 
-          sed -i "s|image:.*|image: $IMAGE_URI|g" "$FOLDER/backend-deployment.yml"
+          sed -i "s|image:.*|image: $IMAGE_URI|g" "$FOLDER/deployment.yml"
 
       # -------------------------
       # Commit YAML changes
