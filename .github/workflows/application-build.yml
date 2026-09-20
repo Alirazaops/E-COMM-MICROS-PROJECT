@@ -14,7 +14,7 @@ env:
   
   #FRONTEND_SERVICES: "main appliances auto beauty books computers earphones electronics fashion food furniture googlegrocery googlemusic googlepay home mobiles sports toys two-wheelers"
   BACKEND_SERVICE: "backend"
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION= true 
+
 
 permissions:
   contents: write
