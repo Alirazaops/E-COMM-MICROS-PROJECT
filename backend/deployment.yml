@@ -1,17 +1,17 @@
-apiVersion: app/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-deployment
-  lables:
+  labels:
     app:  backend
 spec:
   replicas: 2
   selector: 
     matchLabels:
       app:  backend
-  templates:
+  template:
     metadata:
-      lables:
+      labels:
         app:  backend
     spec:
       containers:
@@ -19,7 +19,7 @@ spec:
           image: 023231074572.dkr.ecr.us-east-1.amazonaws.com/shopping-site-backend:5f9d3bae3232c4c2f50c06ec6c7e6f33f463c33d
           ports:
             - containerPort:  5000
-          envForm:
+          envFrom:
             - configMapRef:
                 name: backend-config
 
@@ -30,7 +30,7 @@ metadata:
   name: backend-service
 spec:
   selector:
-    app:  backend-service
+    app:  backend
   ports:
     - protocol: TCP
       port: 80
