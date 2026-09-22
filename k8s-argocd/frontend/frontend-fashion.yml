@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Alirazaops/kubernetes-veeraops-ecommerce-microservices-app.git
+    repoURL: https://github.com/Alirazaops/E-COMM-MICROS-PROJECT.git
     path: frontend/fashion
     targetRevision: main
   destination:
